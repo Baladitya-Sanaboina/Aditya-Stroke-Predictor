@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Heart Disease Predictor</h1>
+    <p>Enter the details below to check for heart disease risk:</p>
+
+    <form id="predictionForm">
+      <label for="age">Age: </label>
+      <input type="number" id="age" name="age" required /><br />
+
+      <label for="sex">Sex (1=Male, 0=Female): </label>
+      <input type="number" id="sex" name="sex" required /><br />
+
+      <label for="cp">Chest Pain Type (0-3): </label>
+      <input type="number" id="cp" name="cp" required /><br />
+
+      <label for="trestbps">Resting Blood Pressure: </label>
+      <input type="number" id="trestbps" name="trestbps" required /><br />
+
+      <label for="chol">Cholesterol (mg/dl): </label>
+      <input type="number" id="chol" name="chol" required /><br />
+
+      <label for="fbs"
+        >Fasting Blood Sugar (> 120 mg/dl) (1=True, 0=False):
+      </label>
+      <input type="number" id="fbs" name="fbs" required /><br />
+
+      <label for="restecg">Resting Electrocardiographic Results (0-2): </label>
+      <input type="number" id="restecg" name="restecg" required /><br />
+
+      <label for="thalach">Max Heart Rate Achieved: </label>
+      <input type="number" id="thalach" name="thalach" required /><br />
+
+      <label for="exang">Exercise Induced Angina (1=Yes, 0=No): </label>
+      <input type="number" id="exang" name="exang" required /><br />
+
+      <label for="oldpeak">Oldpeak (ST depression induced by exercise): </label>
+      <input
+        type="number"
+        step="0.1"
+        id="oldpeak"
+        name="oldpeak"
+        required
+      /><br />
+
+      <label for="slope">Slope of the Peak Exercise ST Segment (0-2): </label>
+      <input type="number" id="slope" name="slope" required /><br />
+
+      <label for="ca">Number of Major Vessels (0-3): </label>
+      <input type="number" id="ca" name="ca" required /><br />
+
+      <label for="thal"
+        >Thalassemia (1=Normal, 2=Fixed Defect, 3=Reversible Defect):
+      </label>
+      <input type="number" id="thal" name="thal" required /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 id="result"></h1>
+        <img id="resultImage" src="" alt="Result Image" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
